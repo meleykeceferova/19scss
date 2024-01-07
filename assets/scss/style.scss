@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Spectral', serif;
+    // font-family: 'Spectral', serif;
 }
 
 .container {
@@ -21,8 +21,6 @@ header {
     nav {
         width: 85%;
         margin: auto;
-        // background-color: transparent;
-        // transition: background-color 0.3s ease-in-out;
 
         .container-fluid {
             button {
@@ -747,9 +745,23 @@ img {
     .contact {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         justify-content: center;
         gap: 30px;
+        button {
+            border-radius: 10px;
+            border: none;
+            background-color: orangered;
+            max-width: 200px;
+            font-size: 20px;
+            color: white;
+            padding: 10px;
+            margin-left: 35px;
+            &:hover{
+                background-color: #343131;
+                transition: all 0.6s ease;
+            }
+        }
 
         .mydiv {
             display: flex;
@@ -777,12 +789,67 @@ img {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 30px;
+            gap: 50px;
 
-            .person {}
+            .person {
+                padding: 0px 30px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 30px;
+
+                input {
+                    border: rgb(223, 129, 95) 1px solid;
+                    padding: 20px 40px;
+                    border-radius: 5px;
+                }
+
+                .keep {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+
+                    input {
+                        border: rgb(223, 129, 95) 1px solid;
+                        border-radius: 5px;
+                    }
+                }
+
+                .icone {
+                    padding: 0px 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    i {
+                        border-radius: 10px;
+                        font-size: 20px;
+                        padding: 10px 20px;
+                        background-color: #efe6ce;
+                    }
+
+                    .keep2 {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 0px;
+
+                        h5 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
+
+
+
+
 
 @media screen and (max-width:997px) {
     #box {
@@ -935,5 +1002,13 @@ img {
                 flex-direction: column;
             }
         }
+    }
+}
+
+.map{
+    padding: 50px 0px;
+    .for{
+        display: flex;
+        align-items: center;
     }
 }
