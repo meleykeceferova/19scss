@@ -774,4 +774,24 @@ img {
 .map .for {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.map .for .item .btn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.map .for .item .btn > div {
+  padding: 2px 15px;
+  background-color: rgb(215, 183, 55);
+  border-radius: 5px;
+}
+.map .for .item .btn a {
+  padding: 2px 15px;
+  background-color: rgb(215, 183, 55);
+  border-radius: 5px;
+}
+.map .for .item h3 {
+  font-size: 40px;
 }

@@ -1,19 +1,27 @@
 const forElem = document.querySelector(".for")
 
-function alldata() {
-    fetch("http://localhost:3000/Data")
-        .then(res => res.json())
+function allData() {
+    axios.get("http://localhost:3000/posts")
+        .then(res => res.data)
         .then(data => {
             data.forEach(element => {
                 forElem.innerHTML += `
-                <div class="item3">
-                <img src="${element.image}" alt="">
-                <span>${element.title}</span>
-                <h5>${element.description}</h5>
+            <div class="item">
+            <p>${element.title}</p>
+            <h3>${element.author}</h3>
+            <div class="btn">
+                <a href="./deteils.html?id=${element.id}">Deteils</a>
+                <div onclick="deleteFunc(${element.id})">DELETE</div>
             </div>
-            `
+          </div>`
             });
         })
-
 }
-alldata()
+allData()
+
+
+
+function deleteFunc(id) {
+    axios.delete("http://localhost:3000/posts/" + id)
+    window.location.reload()
+}

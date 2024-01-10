@@ -1010,5 +1010,29 @@ img {
     .for{
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        .item{
+            .btn{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                >div{
+                    padding: 2px 15px;
+                    background-color: rgb(215, 183, 55);
+                    border-radius: 5px;
+                }
+                a{
+                    padding: 2px 15px;
+                    background-color: rgb(215, 183, 55);
+                    border-radius: 5px;
+                }
+            }
+            h3{
+                font-size: 40px;
+                
+
+            }
+        }
     }
 }
